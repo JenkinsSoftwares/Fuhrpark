@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    abstract class Freizeitwagen : Auto
+    abstract class Funcar : Car
     {
         protected bool Minibar;
-        public Freizeitwagen(Guid NewGUID, string NewHersteller, bool NewMinibar) : base(NewGUID, NewHersteller)
+        public Funcar(Guid NewGUID, string NewManufacturer, bool NewMinibar) : base(NewGUID, NewManufacturer)
         {
             Minibar = NewMinibar;
         }
 
-        public void fahren()
+        new public void Drive()
         {
             Console.WriteLine("scheeechuiehh");
             Console.ReadKey();

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    class Fire_Turbo : Rennwagen
+    class FireTurbo : Racecar
     {
         protected bool Turbo;
-        public Fire_Turbo(Guid NewGUID, string NewHersteller, bool NewTurbo) : base(NewGUID, NewHersteller)
+        public FireTurbo(Guid NewGUID, string NewManufacturer, bool NewTurbo) : base(NewGUID, NewManufacturer)
         {
             Turbo = NewTurbo;
         }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    class Lowrider : Firebird, ISpringen
+    abstract class Racecar : Car
     {
-        public Lowrider(Guid NewGUID, string NewHersteller, double NewWatt) : base(NewGUID, NewHersteller, NewWatt)
+        public Racecar(Guid NewGUID, string NewManufacturer) : base(NewGUID, NewManufacturer )
         {
         }
 
-        public void Springen()
+        public void Drive()
         {
-            Console.WriteLine("I am a Lowrider");
+            Console.WriteLine("Brummbrumm");
             Console.ReadKey();
             Console.Clear();
         }

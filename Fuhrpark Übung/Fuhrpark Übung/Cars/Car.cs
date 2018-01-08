@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    abstract class Auto : IFahren
+    abstract class Car : IDrive
     {
-        protected string Hersteller;
+        protected string Manufacturer;
         protected Guid GUID;
 
-        public Auto (Guid NewGUID, string NewHersteller)
+        public Car (Guid NewGUID, string NewManufacturer)
         {
             GUID = NewGUID;
-            Hersteller = NewHersteller;
+            Manufacturer = NewManufacturer;
         }
 
-        public void fahren()
+        public void Drive()
         {
         }
     }

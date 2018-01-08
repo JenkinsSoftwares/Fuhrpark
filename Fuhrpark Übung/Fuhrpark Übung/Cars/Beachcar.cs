@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    class Beachcar : Freizeitwagen, ISpringen
+    class Beachcar : Funcar, IJump
     {
-        protected bool Sonnenschutz;
-        public Beachcar(Guid NewGUID, string NewHersteller, bool NewMinibar, bool NewSonnenschutz) : base(NewGUID, NewHersteller, NewMinibar)
+        protected bool Sunscreen;
+        public Beachcar(Guid NewGUID, string NewManufacturer, bool NewMinibar, bool NewSunscreen) : base(NewGUID, NewManufacturer, NewMinibar)
         {
-            Sonnenschutz = NewSonnenschutz;
+            Sunscreen = NewSunscreen;
         }
 
-        public void Springen()
+        public void Jump()
         {
             Console.WriteLine("JumpJump");
             Console.ReadKey();

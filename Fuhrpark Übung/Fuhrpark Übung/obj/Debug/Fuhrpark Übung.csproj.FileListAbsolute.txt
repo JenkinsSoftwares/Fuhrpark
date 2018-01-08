@@ -4,3 +4,6 @@ H:\c#\Fuhrpark Übung\Fuhrpark Übung\bin\Debug\Fuhrpark Übung.pdb
 H:\c#\Fuhrpark Übung\Fuhrpark Übung\obj\Debug\Fuhrpark Übung.csprojResolveAssemblyReference.cache
 H:\c#\Fuhrpark Übung\Fuhrpark Übung\obj\Debug\Fuhrpark Übung.exe
 H:\c#\Fuhrpark Übung\Fuhrpark Übung\obj\Debug\Fuhrpark Übung.pdb
+C:\Users\LBU\Documents\Fuhrpark\Fuhrpark Übung\Fuhrpark Übung\bin\Debug\Fuhrpark Übung.exe.config
+C:\Users\LBU\Documents\Fuhrpark\Fuhrpark Übung\Fuhrpark Übung\obj\Debug\Fuhrpark Übung.exe
+C:\Users\LBU\Documents\Fuhrpark\Fuhrpark Übung\Fuhrpark Übung\obj\Debug\Fuhrpark Übung.pdb

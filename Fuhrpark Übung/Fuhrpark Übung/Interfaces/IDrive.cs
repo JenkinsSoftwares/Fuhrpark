@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    interface IFahren
+    interface IDrive
     {
-        void fahren();
+        void Drive();
     }
 }

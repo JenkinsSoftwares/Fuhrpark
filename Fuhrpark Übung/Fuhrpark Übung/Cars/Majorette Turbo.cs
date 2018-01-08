@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    class Majorette_Turbo : Rennwagen
+    class Majorette_Turbo : Racecar
     {
-        protected int Flügel;
-        public Majorette_Turbo(Guid NewGUID, string NewHersteller, int NewFlügel) : base(NewGUID, NewHersteller)
+        protected int Wings;
+        public Majorette_Turbo(Guid NewGUID, string NewManufacturer, int NewWings) : base(NewGUID, NewManufacturer)
         {
-            Flügel = NewFlügel;
+            Wings = NewWings;
         }
 
-        public void fahren ()
+        new public void Drive()
         {
             Console.WriteLine("Uuhweemmnh");
             Console.ReadKey();

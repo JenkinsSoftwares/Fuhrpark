@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Fuhrpark_Übung
 {
-    interface ISpringen
+    interface IJump
     {
-        void Springen();
+        void Jump();
     }
 }

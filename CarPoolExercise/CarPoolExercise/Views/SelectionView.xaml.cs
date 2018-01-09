@@ -19,13 +19,9 @@ namespace CarPoolExercise.Views
     /// </summary>
     public partial class SelectionView : Window
     {
-        private SelectionViewModel selectionViewModel;
         public SelectionView()
         {
             InitializeComponent();
-            selectionViewModel = new SelectionViewModel();
-            this.DataContext = selectionViewModel.cars;
         }
-
     }
 }

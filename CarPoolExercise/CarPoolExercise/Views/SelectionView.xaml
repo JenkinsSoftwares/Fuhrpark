@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarPoolExercise.Views"
         mc:Ignorable="d"
+        DataContext="{StaticResource SelectionViewModel}"
         Title="SelectionView" Height="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
@@ -12,6 +13,9 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Background="Black" Foreground="White" Content="Cars"></Label>
-        <ListBox Grid.Row="1" ItemsSource="{Binding Carpool}"  ></ListBox>
+        <DataGrid Grid.Row="1" SelectionChanged="DataGrid_SelectionChanged">
+            
+        </DataGrid>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="159,100,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Window>

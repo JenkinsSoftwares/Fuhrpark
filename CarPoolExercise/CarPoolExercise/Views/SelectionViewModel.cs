@@ -1,6 +1,7 @@
 ﻿using CarpoolExercise.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,21 @@ namespace CarPoolExercise.Views
 {
     public class SelectionViewModel
     {
-        private List<Car> Cars = new List<Car>();
+
+        private ObservableCollection<Car> _Cars = new ObservableCollection<Car>();
+
+        public ObservableCollection<Car> Carpool
+        {
+           get { return _Cars; }
+           set { _Cars = value; }
+        }
 
         public SelectionViewModel()
+        {
+            FillCarList();
+        }
+
+        public void FillCarList()
         {
             Firebird Firebird = new Firebird(Guid.NewGuid(), "Firebird", 12.5);
             MajoretteTurbo MajoretteTurbo = new MajoretteTurbo(Guid.NewGuid(), "Majorette", 2);
@@ -20,12 +33,12 @@ namespace CarPoolExercise.Views
             Beachcar Beachcar = new Beachcar(Guid.NewGuid(), "Beachcar", true, true);
             Lowrider Lowrider = new Lowrider(Guid.NewGuid(), "Firebird", 12.5);
 
-            Cars.Add(Firebird);
-            Cars.Add(MajoretteTurbo);
-            Cars.Add(Fireturbo);
-            Cars.Add(MercedesBenz);
-            Cars.Add(Beachcar);
-            Cars.Add(Lowrider);
+            _Cars.Add(Firebird);
+            _Cars.Add(MajoretteTurbo);
+            _Cars.Add(Fireturbo);
+            _Cars.Add(MercedesBenz);
+            _Cars.Add(Beachcar);
+            _Cars.Add(Lowrider);
         }
            
     }

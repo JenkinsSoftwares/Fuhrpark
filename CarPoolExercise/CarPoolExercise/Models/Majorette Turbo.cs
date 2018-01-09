@@ -1,17 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CarpoolExercise.Models
 {
-    class MajoretteTurbo : Racecar
+    class MajoretteTurbo : Racecar , INotifyPropertyChanged
     {
-        protected int Wings;
+        protected int _Wings;
         public MajoretteTurbo(Guid NewGUID, string NewManufacturer, int NewWings) : base(NewGUID, NewManufacturer)
         {
-            Wings = NewWings;
+            _Wings = NewWings;
+        }
+
+        public int Wings
+        {
+            get { return _Wings; }
+            set
+            {
+                _Wings = value;
+                NotifyPropertyChanged("Wings");
+            }
         }
 
         new public void Drive()

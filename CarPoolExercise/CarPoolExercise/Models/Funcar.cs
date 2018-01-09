@@ -1,18 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CarpoolExercise.Models
 {
-    abstract class Funcar : Car
+    abstract class Funcar : Car , INotifyPropertyChanged
     {
-        protected bool Minibar;
+        protected bool _Minibar;
         public Funcar(Guid NewGUID, string NewManufacturer, bool NewMinibar) : base(NewGUID, NewManufacturer)
         {
-            Minibar = NewMinibar;
+            _Minibar = NewMinibar;
         }
+
+        public bool Minibar
+        {
+            get { return _Minibar; }
+            set
+            {
+                _Minibar = value;
+                NotifyPropertyChanged("Minibar");
+            }
 
         new public void Drive()
         {

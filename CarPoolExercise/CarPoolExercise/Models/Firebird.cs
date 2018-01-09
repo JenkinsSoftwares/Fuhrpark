@@ -1,19 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CarpoolExercise.Models
 {
-    class Firebird : Racecar
+    class Firebird : Racecar , INotifyPropertyChanged
     {
-        protected double Watt;
+        protected double _Watt;
         public Firebird(Guid NewGUID, string NewManufacturer, double NewWatt) : base(NewGUID, NewManufacturer)
         {
-            Watt = NewWatt;
+            _Watt = NewWatt;
         }
 
-
+        public double Watt
+        {
+            get { return _Watt; }
+            set
+            {
+                _Watt = value;
+                NotifyPropertyChanged("Watt");
+            }
+        }
     }
 }
